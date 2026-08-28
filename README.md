@@ -82,7 +82,7 @@ The optimal number of clusters was evaluated using:
 - Elbow Method
 - Silhouette Score
 
-  Key Analysis
+ ## Key Analysis
 
 The project analyzes customer segments based on:
 
@@ -92,7 +92,7 @@ The project analyzes customer segments based on:
 - Segment size
 - Cluster characteristics
 
-  Business Insights
+ ## Business Insights
 
 The identified customer segments can support:
 
@@ -102,7 +102,7 @@ The identified customer segments can support:
 - Cross-selling and upselling
 - Premium customer strategies
 
-  Business Recommendations
+## Business Recommendations
 
 Recommendations are developed according to the income and spending characteristics of each customer segment.
 
@@ -112,7 +112,7 @@ Recommendations are developed according to the income and spending characteristi
 - Create suitable offers for low-spending customers to increase engagement.
 - Apply cross-selling and upselling strategies based on customer segment characteristics.
 
-  Model Evaluation
+## Model Evaluation
 
 The clustering model is evaluated using:
 
