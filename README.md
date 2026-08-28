@@ -140,48 +140,52 @@ Data Science | Machine Learning | Business Analytics
 
 ### Exploratory Data Analysis
 
-![Customer Age Distribution](Images/download%20(1).png)
+![Customer Age Distribution](Images/download%20%281%29.png)
 
-![Annual Income Distribution](Images/download%20(2).png)
+![Annual Income Distribution](Images/download%20%282%29.png)
 
-![Spending Score Distribution](Images/download%20(3).png)
+![Spending Score Distribution](Images/download%20%283%29.png)
 
-![Annual Income vs Spending Score](Images/download%20(4).png)
+![Annual Income vs Spending Score](Images/download%20%284%29.png)
 
-![Age vs Spending Score](Images/download%20(5).png)
+![Age vs Spending Score](Images/download%20%285%29.png)
 
-![Spending Score by Gender](Images/download%20(6).png)
+![Spending Score by Gender](Images/download%20%286%29.png)
 
-![Age vs Annual Income](Images/download%20(7).png)
+![Age vs Annual Income](Images/download%20%287%29.png)
 
-![Annual Income by Gender](Images/download%20(8).png)
+![Annual Income by Gender](Images/download%20%288%29.png)
 
-![Correlation Heatmap](Images/download%20(9).png)
+![Correlation Heatmap](Images/download%20%289%29.png)
 
-![Customer Feature Pairplot](Images/download%20(10).png)
+![Customer Feature Pairplot](Images/download%20%2810%29.png)
 
- ### Cluster Selection and Evaluation
+### Cluster Selection and Evaluation
 
-![Elbow Method](Images/download%20(11).png)
+![Elbow Method](Images/download%20%2811%29.png)
 
-![Silhouette Score](Images/download%20(12).png)
+![Silhouette Score](Images/download%20%2812%29.png)
 
- ### Customer Segmentation
+### Customer Segmentation
 
-![K-Means Customer Segmentation](Images/download%20(13).png)
+![K-Means Customer Segmentation](Images/download%20%2813%29.png)
 
-![Customer Segmentation Based on Income and Spending](Images/download%20(14).png)
+![Customer Segmentation Based on Income and Spending](Images/download%20%2814%29.png)
 
-![Customer Segmentation with Cluster Centroids](Images/download%20(15).png)
+![Customer Segmentation with Cluster Centroids](Images/download%20%2815%29.png)
 
-![Number of Customers in Each Segment](Images/download%20(16).png)
+![Number of Customers in Each Segment](Images/download%20%2816%29.png)
 
-![Customer Segmentation Based on Income and Spending](Images/download%20(17).png)
+![Customer Segmentation Based on Income and Spending](Images/download%20%2817%29.png)
 
-![Elbow Method](Images/download%20(18).png)
+### Additional Cluster Analysis
 
-![Silhouette Score](Images/download%20(19).png)
+![Elbow Method](Images/download%20%2818%29.png)
 
-![Average Income and Spending Score by Customer Cluster](Images/download%20(20).png)
+![Silhouette Score](Images/download%20%2819%29.png)
+
+![Average Income and Spending Score by Customer Cluster](Images/download%20%2820%29.png)
+
+### Demographic Analysis
 
 ![Customer Distribution by Gender](Images/customer-distribution-by-gender.png)
