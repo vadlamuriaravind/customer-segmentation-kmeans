@@ -140,44 +140,25 @@ Data Science | Machine Learning | Business Analytics
 
 ### Exploratory Data Analysis
 
-[Age vs Annual Income](images/Age%20vs%20Annual%20Income.png)
+- [Age vs Annual Income](images/Age%20vs%20Annual%20Income.png)
+- [Age vs Spending Score](images/Age%20vs%20Spending%20Score.png)
+- [Annual Income Distribution of Customers](images/Annual%20Income%20Distribution%20of%20Customers.png)
+- [Annual Income by Gender](images/Annual%20Income%20by%20Gender.png)
+- [Annual Income vs Spending Score](images/Annual%20Income%20vs%20Spending%20Score.png)
+- [Average Income and Spending Score by Customer Cluster](images/Average%20Income%20and%20Spending%20Score%20by%20Customer%20Cluster.png)
+- [Correlation Heatmap of Customer Features](images/Correlation%20Heatmap%20of%20Customer%20Features.png)
+- [Customer Age Distribution](images/Customer%20Age%20Distribution.png)
+- [Customer Distribution by Gender](images/Customer%20Distribution%20by%20Gender.png)
+- [Customer Feature Pairplot](images/Customer%20Feature%20Pairplot.png)
+- [Customer Segmentation Based on Income and Spending-2](images/Customer%20Segmentation%20Based%20on%20Income%20and%20Spending-2.png)
+- [Customer Segmentation Based on Income and Spending](images/Customer%20Segmentation%20Based%20on%20Income%20and%20Spending.png)
+- [Customer Segmentation using K-Means Clustering](images/Customer%20Segmentation%20using%20K-Means%20Clustering.png)
+- [Customer Segmentation with Cluster Centroids](images/Customer%20Segmentation%20with%20Cluster%20Centroids.png)
+- [Elbow Method for Optimal Number of Clusters](images/Elbow%20Method%20for%20Optimal%20Number%20of%20Clusters.png)
+- [Elbow Method](images/Elbow%20Method.png)
+- [Number of Customers in Each Segment](images/Number%20of%20Customers%20in%20Each%20Segment.png)
+- [Silhouette Score for Different Numbers of Clusters](images/Silhouette%20Score%20for%20Different%20Numbers%20of%20Clusters.png)
+- [Silhouette Score](images/Silhouette%20Score.png)
+- [Spending Score Distribution of Customers](images/Spending%20Score%20Distribution%20of%20Customers.png)
+- [Spending Score by Gender](images/Spending%20Score%20by%20Gender.png)
 
-[Age vs Spending Score](images/Age%20vs%20Spending%20Score.png)
-
-[Annual Income Distribution of Customers](images/Annual%20Income%20Distribution%20of%20Customers.png)
-
-[Annual Income by Gender](images/Annual%20Income%20by%20Gender.png)
-
-[Annual Income vs Spending Score](images/Annual%20Income%20vs%20Spending%20Score.png)
-
-[Average Income and Spending Score by Customer Cluster](images/Average%20Income%20and%20Spending%20Score%20by%20Customer%20Cluster.png)
-
-[Correlation Heatmap of Customer Features](images/Correlation%20Heatmap%20of%20Customer%20Features.png)
-
-[Customer Age Distribution](images/Customer%20Age%20Distribution.png)
-
-[Customer Distribution by Gender](images/Customer%20Distribution%20by%20Gender.png)
-
-[Customer Feature Pairplot](images/Customer%20Feature%20Pairplot.png)
-
-[Customer Segmentation Based on Income and Spending-2](images/Customer%20Segmentation%20Based%20on%20Income%20and%20Spending-2.png)
-
-[Customer Segmentation Based on Income and Spending](images/Customer%20Segmentation%20Based%20on%20Income%20and%20Spending.png)
-
-[Customer Segmentation using K-Means Clustering](images/Customer%20Segmentation%20using%20K-Means%20Clustering.png)
-
-[Customer Segmentation with Cluster Centroids](images/Customer%20Segmentation%20with%20Cluster%20Centroids.png)
-
-[Elbow Method for Optimal Number of Clusters](images/Elbow%20Method%20for%20Optimal%20Number%20of%20Clusters.png)
-
-[Elbow Method](images/Elbow%20Method.png)
-
-[Number of Customers in Each Segment](images/Number%20of%20Customers%20in%20Each%20Segment.png)
-
-[Silhouette Score for Different Numbers of Clusters](images/Silhouette%20Score%20for%20Different%20Numbers%20of%20Clusters.png)
-
-[Silhouette Score](images/Silhouette%20Score.png)
-
-[Spending Score Distribution of Customers](images/Spending%20Score%20Distribution%20of%20Customers.png)
-
-[Spending Score by Gender](images/Spending%20Score%20by%20Gender.png)
