@@ -140,52 +140,44 @@ Data Science | Machine Learning | Business Analytics
 
 ### Exploratory Data Analysis
 
-![Customer Age Distribution](Images/download%20%281%29.png)
+![Age vs Annual Income](images/Age%20vs%20Annual%20Income.png)
 
-![Annual Income Distribution](Images/download%20%282%29.png)
+![Age vs Spending Score](images/Age%20vs%20Spending%20Score.png)
 
-![Spending Score Distribution](Images/download%20%283%29.png)
+![Annual Income Distribution of Customers](images/Annual%20Income%20Distribution%20of%20Customers.png)
 
-![Annual Income vs Spending Score](Images/download%20%284%29.png)
+![Annual Income by Gender](images/Annual%20Income%20by%20Gender.png)
 
-![Age vs Spending Score](Images/download%20%285%29.png)
+![Annual Income vs Spending Score](images/Annual%20Income%20vs%20Spending%20Score.png)
 
-![Spending Score by Gender](Images/download%20%286%29.png)
+![Average Income and Spending Score by Customer Cluster](images/Average%20Income%20and%20Spending%20Score%20by%20Customer%20Cluster.png)
 
-![Age vs Annual Income](Images/download%20%287%29.png)
+![Correlation Heatmap of Customer Features](images/Correlation%20Heatmap%20of%20Customer%20Features.png)
 
-![Annual Income by Gender](Images/download%20%288%29.png)
+![Customer Age Distribution](images/Customer%20Age%20Distribution.png)
 
-![Correlation Heatmap](Images/download%20%289%29.png)
+![Customer Distribution by Gender](images/Customer%20Distribution%20by%20Gender.png)
 
-![Customer Feature Pairplot](Images/download%20%2810%29.png)
+![Customer Feature Pairplot](images/Customer%20Feature%20Pairplot.png)
 
-### Cluster Selection and Evaluation
+![Customer Segmentation Based on Income and Spending-2](images/Customer%20Segmentation%20Based%20on%20Income%20and%20Spending-2.png)
 
-![Elbow Method](Images/download%20%2811%29.png)
+![Customer Segmentation Based on Income and Spending](images/Customer%20Segmentation%20Based%20on%20Income%20and%20Spending.png)
 
-![Silhouette Score](Images/download%20%2812%29.png)
+![Customer Segmentation using K-Means Clustering](images/Customer%20Segmentation%20using%20K-Means%20Clustering.png)
 
-### Customer Segmentation
+![Customer Segmentation with Cluster Centroids](images/Customer%20Segmentation%20with%20Cluster%20Centroids.png)
 
-![K-Means Customer Segmentation](Images/download%20%2813%29.png)
+![Elbow Method for Optimal Number of Clusters](images/Elbow%20Method%20for%20Optimal%20Number%20of%20Clusters.png)
 
-![Customer Segmentation Based on Income and Spending](Images/download%20%2814%29.png)
+![Elbow Method](images/Elbow%20Method.png)
 
-![Customer Segmentation with Cluster Centroids](Images/download%20%2815%29.png)
+![Number of Customers in Each Segment](images/Number%20of%20Customers%20in%20Each%20Segment.png)
 
-![Number of Customers in Each Segment](Images/download%20%2816%29.png)
+![Silhouette Score for Different Numbers of Clusters](images/Silhouette%20Score%20for%20Different%20Numbers%20of%20Clusters.png)
 
-![Customer Segmentation Based on Income and Spending](Images/download%20%2817%29.png)
+![Silhouette Score](images/Silhouette%20Score.png)
 
-### Additional Cluster Analysis
+![Spending Score Distribution of Customers](images/Spending%20Score%20Distribution%20of%20Customers.png)
 
-![Elbow Method](Images/download%20%2818%29.png)
-
-![Silhouette Score](Images/download%20%2819%29.png)
-
-![Average Income and Spending Score by Customer Cluster](Images/download%20%2820%29.png)
-
-### Demographic Analysis
-
-![Customer Distribution by Gender](Images/customer-distribution-by-gender.png)
+![Spending Score by Gender](images/Spending%20Score%20by%20Gender.png)
