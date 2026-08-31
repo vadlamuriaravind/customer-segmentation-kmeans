@@ -27,24 +27,24 @@ Records: 200 customers
 
  Features
 
-- CustomerID
-- Gender
-- Age
-- Annual Income (k$)
-- Spending Score (1-100)
+CustomerID
+Gender
+Age
+Annual Income (k$)
+Spending Score (1-100)
 
 ---
 
  Technologies Used
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Google Colab
-- K-Means Clustering
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-learn
+Google Colab
+K-Means Clustering
 
 ---
 
@@ -72,55 +72,55 @@ K-Means Clustering
 
  Selected Features
 
-- Annual Income (k$)
-- Spending Score (1-100)
+ Annual Income (k$)
+Spending Score (1-100)
 
  Cluster Selection
 
 The optimal number of clusters was evaluated using:
 
-- Elbow Method
-- Silhouette Score
+Elbow Method
+Silhouette Score
 
  ## Key Analysis
 
 The project analyzes customer segments based on:
 
-- Customer demographics
-- Annual income
-- Spending behavior
-- Segment size
-- Cluster characteristics
+Customer demographics
+ Annual income
+Spending behavior
+Segment size
+Cluster characteristics
 
  ## Business Insights
 
 The identified customer segments can support:
 
-- Targeted marketing campaigns
-- Personalized offers
-- Customer retention
-- Cross-selling and upselling
-- Premium customer strategies
+Targeted marketing campaigns
+ Personalized offers
+ Customer retention
+ Cross-selling and upselling
+Premium customer strategies
 
 ## Business Recommendations
 
 Recommendations are developed according to the income and spending characteristics of each customer segment.
 
-- Develop targeted campaigns for high-value customers.
-- Provide personalized promotions for high-spending customers.
-- Use retention strategies for valuable customer groups.
-- Create suitable offers for low-spending customers to increase engagement.
-- Apply cross-selling and upselling strategies based on customer segment characteristics.
+Develop targeted campaigns for high-value customers.
+Provide personalized promotions for high-spending customers.
+Use retention strategies for valuable customer groups.
+ Create suitable offers for low-spending customers to increase engagement.
+Apply cross-selling and upselling strategies based on customer segment characteristics.
 
 ## Model Evaluation
 
 The clustering model is evaluated using:
 
-- Within-Cluster Sum of Squares (WCSS)
-- Silhouette Score
-- Cluster-size analysis
-- Cluster visualization
-- Business interpretability
+Within-Cluster Sum of Squares (WCSS)
+Silhouette Score
+Cluster-size analysis
+Cluster visualization
+Business interpretability
 
 ## Project Outcome
 
