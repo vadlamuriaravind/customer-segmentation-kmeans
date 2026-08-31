@@ -5,8 +5,11 @@
 
 This project applies unsupervised machine learning to segment mall customers based on their Annual Income and Spending Score.
 
-The objective is to identify distinct customer groups and transform the resulting clusters into meaningful customer segments that can support targeted marketing, personalized promotions, customer engagement, cross-selling, upselling, and customer retention strategies.
+The objective is to identify distinct customer groups and transform the resulting clusters into meaningful customer segments that can support targeted marketing, personalized promotions, customer engagement, cross-selling, upselling, and customer retention strategies.   
 
+## Live Demo
+
+[Customer Segmentation Streamlit App](YOUR_STREAMLIT_APP_URL)
 ---
 
  Business Problem
