@@ -7,9 +7,9 @@ This project applies unsupervised machine learning to segment mall customers bas
 
 The objective is to identify distinct customer groups and transform the resulting clusters into meaningful customer segments that can support targeted marketing, personalized promotions, customer engagement, cross-selling, upselling, and customer retention strategies.   
 
-[## Live Demo
+## Live Demo
 
-[Customer Segmentation Streamlit App](YOUR_STREAMLIT_APP_URL)](https://github.com/vadlamuriaravind/customer-segmentation-kmeans/blob/main/YOUR_STREAMLIT_APP_URL)
+[Customer Segmentation Streamlit App](PASTE_YOUR_STREAMLIT_URL_HERE)
 ---
 
  Business Problem
