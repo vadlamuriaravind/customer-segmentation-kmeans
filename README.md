@@ -9,7 +9,8 @@ The objective is to identify distinct customer groups and transform the resultin
 
 ## Live Demo
 
-[Customer Segmentation Streamlit App](...)
+[Customer Segmentation Streamlit App](https://something.streamlit.app)
+
 
 ---
 
