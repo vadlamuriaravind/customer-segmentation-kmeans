@@ -1,400 +1,315 @@
- Customer Segmentation Using K-Means Clustering
+# Customer Segmentation Using K-Means Clustering
 
-An end-to-end unsupervised machine learning project that applies K-Means clustering to segment mall customers based on their income and spending behavior.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://customer-segmentation-kmeans-s2ewbtaskf9aryzluogpmd.streamlit.app/)
 
----
+An end-to-end unsupervised machine learning project that segments mall customers using K-Means clustering based on Annual Income and Spending Score.
 
-Project Overview
+## Table of Contents
 
-This project applies Unsupervised Machine Learning to identify meaningful groups of mall customers based primarily on their Annual Income and Spending Score.
+- [Live Demo](#live-demo)
+- [Project Overview](#project-overview)
+- [Business Problem](#business-problem)
+- [Project Objectives](#project-objectives)
+- [Dataset](#dataset)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Project Workflow](#project-workflow)
+- [Machine Learning Approach](#machine-learning-approach)
+- [Results](#results)
+- [Cluster Profiles](#cluster-profiles)
+- [Business Recommendations](#business-recommendations)
+- [Model Evaluation](#model-evaluation)
+- [Streamlit Application](#streamlit-application)
+- [Installation and Usage](#installation-and-usage)
+- [Visualizations](#visualizations)
+- [Key Learning Outcomes](#key-learning-outcomes)
+- [Author](#author)
 
-The objective is to transform raw customer data into meaningful customer segments that can support data-driven business strategies, including targeted marketing campaigns, personalized promotions, customer engagement, customer retention, cross-selling, upselling, and premium customer strategies.
+## Live Demo
 
-The project demonstrates a complete Data Science workflow, from raw data analysis and exploratory analysis to machine learning, business interpretation, and interactive deployment using Streamlit.
+👉 **[Customer Segmentation Streamlit App](https://customer-segmentation-kmeans-s2ewbtaskf9aryzluogpmd.streamlit.app/)**
 
----
+## Project Overview
 
-🚀 Live Demo
+This project applies unsupervised machine learning to identify meaningful groups of mall customers based primarily on their **Annual Income** and **Spending Score**.
 
-[Customer Segmentation Streamlit App](https://customer-segmentation-kmeans-s2ewbtaskf9aryzluogpmd.streamlit.app/)
+The objective is to transform raw customer data into meaningful customer segments that support data-driven business strategies, including targeted marketing campaigns, personalized promotions, customer engagement, customer retention, cross-selling, upselling, and premium customer strategies.
 
----
+The project demonstrates a complete Data Science workflow — from raw data analysis and exploratory analysis through machine learning, business interpretation, and interactive deployment using Streamlit.
 
-Business Problem
+## Business Problem
 
-Businesses serve customers with different income levels, spending behaviors, and purchasing characteristics. Therefore, a single marketing strategy may not be equally effective for every customer.
+Businesses serve customers with different income levels, spending behaviors, and purchasing characteristics. A single marketing strategy is therefore not equally effective for every customer.
 
-Customer segmentation helps businesses identify groups of customers with similar characteristics and develop more relevant strategies for each group.
+Customer segmentation helps businesses identify groups of customers with similar characteristics and develop more relevant strategies for each group. This project uses K-Means Clustering to identify customer groups based on income and spending behavior and to transform the resulting clusters into meaningful business insights.
 
-This project uses K-Means Clustering to identify customer groups based on income and spending behavior and transform the resulting clusters into meaningful business insights.
+## Project Objectives
 
----
+The main objective is to analyze mall customer data and identify meaningful customer segments using K-Means Clustering.
 
-Project Objectives
+The project covers:
 
-The main objective of this project is to analyze mall customer data and identify meaningful customer segments using K-Means Clustering.
+- Data quality analysis
+- Exploratory Data Analysis
+- Feature selection and feature scaling
+- Cluster evaluation using the Elbow Method and Silhouette Score
+- Customer segmentation and cluster profiling
+- Business interpretation and recommendations
+- Results export
+- Streamlit deployment
 
-The project includes data quality analysis, exploratory data analysis, feature selection, feature scaling, cluster evaluation, customer segmentation, cluster profiling, business interpretation, business recommendations, results export, and Streamlit deployment.
+## Dataset
 
-The project also demonstrates how Machine Learning results can be transformed into meaningful business insights and practical customer engagement strategies.
+- **Dataset:** Mall Customer Segmentation Data
+- **Source:** [Kaggle](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python)
+- **Records:** 200 customers
+- **Attributes:** 5 original columns
 
----
+### Dataset Features
 
-Dataset
+| Feature | Role | Description |
+| --- | --- | --- |
+| CustomerID | Identifier | Unique identifier for each customer |
+| Gender | Demographic | Customer gender |
+| Age | Demographic | Customer age |
+| Annual Income (k$) | Financial | Customer annual income |
+| Spending Score (1-100) | Behavioral | Customer spending behavior score |
 
-Dataset: Mall Customer Segmentation Data
+The primary features used for the final clustering analysis are **Annual Income (k$)** and **Spending Score (1-100)**. These features help identify customers with similar financial capacity and spending behavior.
 
-Source: Kaggle
+**Note:** Spending Score is a composite index supplied by the dataset. It should not be interpreted as a purchase amount, profit contribution, or customer lifetime value.
 
-Records: 200 customers
+## Technologies Used
 
-Dataset Features
+- **Language:** Python
+- **Data handling:** Pandas, NumPy
+- **Visualization:** Matplotlib, Seaborn
+- **Machine Learning:** Scikit-learn (KMeans, StandardScaler, silhouette_score)
+- **Environment:** Google Colab / Jupyter Notebook
+- **Deployment:** Streamlit
+- **Version control:** Git and GitHub
 
-CustomerID: Unique identifier for each customer.
+## Project Structure
 
-Gender: Customer gender.
-
-Age: Customer age.
-
-Annual Income (k$): Customer annual income.
-
-Spending Score (1-100): Customer spending behavior score.
-
-The primary features used for the final clustering analysis are Annual Income (k$) and Spending Score (1-100).
-
-These features help identify customers with similar financial capacity and spending behavior.
-
----
-
-Technologies Used
-
-Python
-
-Pandas
-
-NumPy
-
-Matplotlib
-
-Seaborn
-
-Scikit-learn
-
-K-Means Clustering
-
-Google Colab
-
-Streamlit
-
-GitHub
-
----
-
-Project Structure
-
+```text
 customer-segmentation-kmeans/
+│
+├── data/
+│   └── Mall_Customers.csv
+├── images/
+│   └── Project visualizations and charts
+├── Results/
+│   └── Customer_Segmentation_Results.csv
+├── Customer_Segmentation_Project.ipynb
+├── app.py
+├── requirements.txt
+├── .gitignore
+├── LICENSE
+└── README.md
+```
 
-data/
+- `data/` — the original customer dataset
+- `images/` — exploratory analysis, clustering, and model evaluation visualizations
+- `Results/` — the final customer segmentation results
+- `Customer_Segmentation_Project.ipynb` — the complete end-to-end implementation
+- `app.py` — the interactive Streamlit application
+- `requirements.txt` — required Python libraries
+- `LICENSE` — MIT license
+- `README.md` — project documentation
 
-Mall_Customers.csv
+## Project Workflow
 
-images/
+```text
+1.  Data Loading
+2.  Data Understanding
+3.  Data Quality Analysis
+4.  Exploratory Data Analysis
+5.  Feature Selection
+6.  Feature Scaling
+7.  Elbow Method
+8.  Silhouette Score
+9.  K-Means Clustering
+10. Cluster Profiling
+11. Customer Segment Analysis
+12. Business Recommendations
+13. Model Evaluation
+14. Results Export
+15. Streamlit Deployment
+```
 
-Project visualizations and charts
+## Machine Learning Approach
 
-Results/
+### Algorithm
 
+**K-Means Clustering**, an unsupervised algorithm that groups similar data points into clusters. Customers are grouped by similarity in Annual Income and Spending Score.
+
+### Feature Scaling
+
+K-Means is distance-based, so features are standardized with **StandardScaler** before clustering. This prevents a feature with a larger numerical range from disproportionately influencing the distance calculations.
+
+### Cluster Selection
+
+The number of clusters is evaluated using two complementary diagnostics:
+
+- **Elbow Method** — analyzes Within-Cluster Sum of Squares (WCSS) across candidate values of K
+- **Silhouette Score** — evaluates cluster cohesion and separation
+
+Business interpretability is treated as a third criterion: a solution must be describable in business terms to be useful.
+
+### Final Configuration
+
+| Parameter | Value |
+| --- | --- |
+| Algorithm | K-Means Clustering |
+| n_clusters | 5 |
+| random_state | 42 |
+| n_init | 10 |
+| Features | Annual Income (k$), Spending Score (1-100) |
+| Preprocessing | StandardScaler |
+| WCSS at K=5 | 65.5684 |
+| Silhouette Score at K=5 | 0.5547 |
+
+## Results
+
+The final model assigns all 200 customers across five technical clusters:
+
+| Technical Cluster | Customer Count |
+| --- | --- |
+| Cluster 0 | 81 |
+| Cluster 1 | 39 |
+| Cluster 2 | 22 |
+| Cluster 3 | 35 |
+| Cluster 4 | 23 |
+| **Total** | **200** |
+
+Cluster identifiers are technical model outputs and carry no inherent business meaning. Business significance is assigned during profiling and interpretation.
+
+Results are exported to:
+
+```text
 Customer_Segmentation_Results.csv
+```
 
-Customer_Segmentation_Project.ipynb
+The file contains the original customer information plus two model-derived fields — **Cluster** (technical assignment) and **Segment** (business interpretation).
 
-README.md
+## Cluster Profiles
 
-app.py
+| Cluster | Customers | Avg Age | Avg Income (k$) | Avg Spending Score |
+| --- | --- | --- | --- | --- |
+| Cluster 0 | 81 | 42.72 | 55.30 | 49.52 |
+| Cluster 1 | 39 | 32.69 | 86.54 | 82.13 |
+| Cluster 2 | 22 | 25.27 | 25.73 | 79.36 |
+| Cluster 3 | 35 | 41.11 | 88.20 | 17.11 |
+| Cluster 4 | 23 | 45.22 | 26.30 | 20.91 |
 
-requirements.txt
+Five technical clusters map to **four** business segments. Cluster 0 and Cluster 1 both satisfy the High-Value condition under the implemented median-based mapping rule, so they share that label — even though their numerical profiles differ.
 
-The data folder contains the original customer dataset.
+| Business Segment | Technical Clusters | Customers |
+| --- | --- | --- |
+| High-Value Customers | Cluster 0, Cluster 1 | 120 |
+| High-Income Low-Spending Customers | Cluster 3 | 35 |
+| Low-Income High-Spending Customers | Cluster 2 | 22 |
+| Low-Value Customers | Cluster 4 | 23 |
 
-The images folder contains exploratory data analysis, clustering, and model evaluation visualizations.
+These labels are analytical descriptors for clusters, not measured profitability or customer lifetime value.
 
-The Results folder contains the final customer segmentation results.
+## Business Recommendations
 
-Customer_Segmentation_Project.ipynb contains the complete end-to-end Data Science and Machine Learning implementation.
+| Segment | Recommended Strategy |
+| --- | --- |
+| High-Value Customers | Premium offers, loyalty rewards, personalized recommendations, and exclusive products to strengthen retention |
+| High-Income Low-Spending Customers | Personalized promotions, relevant product recommendations, and targeted incentives to increase engagement and spending |
+| Low-Income High-Spending Customers | Loyalty programmes, affordable bundles, repeat-purchase incentives, and appropriately priced offers to sustain engagement |
+| Low-Value Customers | Cost-effective promotions, introductory offers, and personalized campaigns to improve engagement incrementally |
 
-app.py contains the Streamlit application for interactive customer segmentation.
+These recommendations are derived from observed patterns in the supplied dataset. They are analytical decision support, not guarantees of campaign performance.
 
-requirements.txt contains the required Python libraries for running the project.
+## Model Evaluation
 
-README.md contains the complete project documentation.
+Because this is an **unsupervised** learning task, conventional classification metrics such as accuracy, precision, recall, and F1-score do not apply — there is no ground-truth segment label against which predictions could be compared.
 
----
+The model is evaluated using:
 
-Project Workflow
+| Dimension | Measure | Result |
+| --- | --- | --- |
+| Technical quality | WCSS at K=5 | 65.5684 |
+| Technical quality | Silhouette Score at K=5 | 0.5547 |
+| Structural | Cluster size distribution | 81 / 39 / 22 / 35 / 23 |
+| Structural | Empty or degenerate clusters | None |
+| Structural | Visual separation | Confirmed by scatter plot |
+| Business | Segment describability | Four interpretable segments |
+| Business | Actionability | Recommendations developed per segment |
 
-The project follows a complete end-to-end workflow.
+The Silhouette Score is an internal validation measure. It ranges from −1 to +1, where higher values indicate better cluster cohesion and separation. It is **not** a classification accuracy percentage.
 
-Data Loading
+## Streamlit Application
 
-Data Understanding
+The interactive application allows users to:
 
-Data Quality Analysis
+- Enter a customer's Annual Income and Spending Score using sidebar sliders
+- Predict the customer's cluster and view the corresponding business segment
+- View summary metrics for the dataset
+- Explore the segmentation scatter plot with cluster centroids
+- Review the technical cluster profile and business segment summary
+- Read segment-specific business recommendations
+- Download the segmentation results as a CSV file
 
-Exploratory Data Analysis
+The application applies the **same fitted StandardScaler** used during training, so predictions are made in the same feature space as the notebook. Cluster centroids are inverse-transformed back to the original income and spending scale before plotting.
 
-Feature Selection
+**What the prediction means:** the output is a cluster assignment based on similarity in the modelled feature space. It is not a forecast of future spending, a measure of customer value, or an output of a trained recommendation engine.
 
-Feature Scaling
+## Installation and Usage
 
-Elbow Method
+**1. Clone the repository**
 
-Silhouette Score
+```bash
+git clone [github.com](https://github.com/vadlamuriaravind/customer-segmentation-kmeans.git)
+```
 
-K-Means Clustering
+**2. Navigate to the project directory**
 
-Cluster Profiling
-
-Customer Segment Analysis
-
-Business Recommendations
-
-Model Evaluation
-
-Results Export
-
-Streamlit Deployment
-
----
-
-Machine Learning Approach
-
-Algorithm
-
-K-Means Clustering
-
-K-Means is an unsupervised machine learning algorithm used to group similar data points into clusters.
-
-In this project, customers are grouped based on similarities in their Annual Income and Spending Score.
-
----
-
-Selected Features
-
-The final clustering analysis primarily uses Annual Income (k$) and Spending Score (1-100).
-
-These features provide meaningful information for identifying customer groups based on financial capacity and spending behavior.
-
----
-
-Feature Scaling
-
-Feature scaling is applied before clustering because K-Means is a distance-based algorithm.
-
-Standardizing the selected features helps ensure that differences in feature scales do not disproportionately influence the clustering process.
-
----
-
-Cluster Selection
-
-The number of clusters is evaluated using the Elbow Method and Silhouette Score.
-
-Elbow Method
-
-The Elbow Method analyzes the Within-Cluster Sum of Squares (WCSS) for different numbers of clusters.
-
-Silhouette Score
-
-The Silhouette Score evaluates how well-separated and cohesive the identified clusters are.
-
-These evaluation methods help assess the clustering solution before finalizing the customer segments.
-
----
-
-Key Analysis
-
-The project performs exploratory and clustering analysis to understand customer demographics, customer age distribution, gender distribution, annual income distribution, spending score distribution, relationships between customer features, income and spending behavior, customer cluster characteristics, and segment size and distribution.
-
-The analysis helps transform raw customer information into meaningful patterns and business-oriented customer groups.
-
----
-
-Customer Segmentation
-
-The K-Means clustering model assigns customers to groups based on similarities in income and spending behavior.
-
-The numerical cluster assignments are then analyzed and interpreted as meaningful customer segments.
-
-The overall analytical process can be summarized as:
-
-Raw Customer Data
-
-↓
-
-Feature Analysis
-
-↓
-
-K-Means Clustering
-
-↓
-
-Cluster Assignment
-
-↓
-
-Customer Segment Interpretation
-
-↓
-
-Business Insights
-
----
-
-Business Insights
-
-The identified customer segments can support targeted marketing campaigns, personalized offers, improved customer engagement, customer retention strategies, cross-selling opportunities, upselling opportunities, and premium customer strategies.
-
-Customer segmentation allows businesses to better understand different customer groups instead of applying the same strategy to every customer.
-
----
-
-Business Recommendations
-
-Business recommendations are developed according to the income and spending characteristics of each customer segment.
-
-High-Value Customers
-
-High-value customers can be targeted with personalized premium campaigns, loyalty rewards, exclusive offers, and long-term customer retention strategies.
-
-High-Income Low-Spending Customers
-
-High-income customers with lower spending behavior can be targeted using personalized product recommendations, engagement strategies, and incentives designed to encourage increased spending.
-
-High-Spending Customers
-
-High-spending customers can receive personalized promotions and relevant offers while businesses can explore opportunities for cross-selling and upselling.
-
-Low-Spending Customer Groups
-
-Low-spending customer groups can be targeted with suitable promotional campaigns, affordable products, and engagement strategies designed to encourage increased spending.
-
----
-
-Model Evaluation
-
-The clustering model is evaluated using Within-Cluster Sum of Squares (WCSS), the Elbow Method, Silhouette Score, cluster-size analysis, cluster visualization, cluster profiling, and business interpretability.
-
-Since this is an unsupervised learning project, traditional classification metrics such as accuracy are not the primary evaluation criteria.
-
-The quality of the model is evaluated based on cluster separation, cohesion, interpretability, and business usefulness.
-
----
-
-Project Results
-
-The final clustering results are exported as:
-
-Customer_Segmentation_Results.csv
-
-The results contain the original customer information along with numerical cluster assignments and customer segment labels.
-
-This file represents the final analytical output of the customer segmentation process.
-
----
-
-Streamlit Application
-
-The project includes an interactive Streamlit application that allows users to enter customer income information and customer spending score information.
-
-The application predicts the customer's cluster and displays the corresponding customer segment.
-
-Users can also visualize customer clusters, view cluster centroids, analyze customer segment summaries, and explore business recommendations.
-
-The Streamlit application demonstrates how the Machine Learning workflow can be transformed into an interactive and user-friendly analytical application.
-
----
-
-Installation and Usage
-
-Clone the repository.
-
-git clone <repository-url>
-
-Navigate to the project directory.
-
+```bash
 cd customer-segmentation-kmeans
+```
 
-Install the required libraries.
+**3. Install the required libraries**
 
+```bash
 pip install -r requirements.txt
+```
 
-Run the Streamlit application.
+**4. Run the Streamlit application**
 
+```bash
 streamlit run app.py
+```
 
----
 
-Key Learning Outcomes
 
-This project demonstrates practical experience in Python programming, data analysis, data quality analysis, Exploratory Data Analysis, data visualization, feature selection, feature scaling, unsupervised machine learning, K-Means Clustering, the Elbow Method, Silhouette Score, cluster profiling, customer segmentation, business analytics, Streamlit deployment, and GitHub project documentation.
+## Key Learning Outcomes
 
----
+This project demonstrates practical experience in:
 
-Project Outcome
+- Python programming and data analysis
+- Data quality assessment and Exploratory Data Analysis
+- Data visualization with Matplotlib and Seaborn
+- Feature selection and feature scaling for distance-based clustering
+- Unsupervised machine learning with K-Means Clustering
+- Cluster optimization using the Elbow Method and Silhouette Score
+- Cluster profiling and business interpretation
+- Business analytics and recommendation development
+- Streamlit application deployment
+- GitHub project organization and documentation
 
-This project demonstrates an end-to-end Data Science workflow that transforms raw customer data into meaningful customer groups and actionable business insights.
 
-The complete workflow can be summarized as:
 
-Raw Customer Data
+## License
 
-↓
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
-Data Quality Analysis
 
-↓
 
-Exploratory Data Analysis
 
-↓
-
-Feature Selection
-
-↓
-
-Feature Scaling
-
-↓
-
-Cluster Evaluation
-
-↓
-
-K-Means Clustering
-
-↓
-
-Cluster Profiling
-
-↓
-
-Business Segmentation
-
-↓
-
-Business Recommendations
-
-↓
-
-Results Export
-
-↓
-
-Streamlit Deployment
-
-The project demonstrates both the technical implementation of an unsupervised machine learning model and the ability to translate analytical results into meaningful business insights.
-
----
 
 Visualizations
 
