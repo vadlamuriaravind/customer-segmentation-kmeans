@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
 
 st.set_page_config(
     page_title="Customer Segmentation using K-Means",
@@ -17,13 +18,16 @@ df = load_data()
 
 features = df[["Annual Income (k$)", "Spending Score (1-100)"]]
 
+scaler = StandardScaler()
+features_scaled = scaler.fit_transform(features)
+
 kmeans = KMeans(
     n_clusters=5,
     random_state=42,
     n_init=10
 )
 
-df["Cluster"] = kmeans.fit_predict(features)
+df["Cluster"] = kmeans.fit_predict(features_scaled)
 
 cluster_profiles = (
     df.groupby("Cluster")
@@ -34,27 +38,13 @@ cluster_profiles = (
     )
 )
 
-high_income_threshold = cluster_profiles["Average_Income"].median()
-high_spending_threshold = cluster_profiles["Average_Spending"].median()
-
-segment_names = {}
-
-for cluster, row in cluster_profiles.iterrows():
-
-    income_level = row["Average_Income"] >= high_income_threshold
-    spending_level = row["Average_Spending"] >= high_spending_threshold
-
-    if income_level and spending_level:
-        segment_names[cluster] = "High-Income High-Spending Customers"
-
-    elif income_level and not spending_level:
-        segment_names[cluster] = "High-Income Low-Spending Customers"
-
-    elif not income_level and spending_level:
-        segment_names[cluster] = "Low-Income High-Spending Customers"
-
-    else:
-        segment_names[cluster] = "Low-Income Low-Spending Customers"
+segment_names = {
+    0: "High-Value Customers",
+    1: "High-Value Customers",
+    2: "Low-Income High-Spending Customers",
+    3: "High-Income Low-Spending Customers",
+    4: "Low-Value Customers"
+}
 
 df["Segment"] = df["Cluster"].map(segment_names)
 
@@ -103,17 +93,14 @@ st.divider()
 st.subheader("🎯 Customer Segment Prediction")
 
 if predict_button:
-
-    prediction = kmeans.predict([[income, spending]])[0]
-
+    input_data = scaler.transform([[income, spending]])
+    prediction = kmeans.predict(input_data)[0]
     segment = segment_names[prediction]
 
     st.success(f"Predicted Segment: **{segment}**")
     st.write(f"Annual Income: **${income}k**")
     st.write(f"Spending Score: **{spending}**")
-
 else:
-
     st.info(
         "Select income and spending score from the sidebar, "
         "then click Predict Customer Segment."
@@ -124,7 +111,6 @@ st.subheader("📊 Customer Segmentation")
 fig, ax = plt.subplots(figsize=(10, 6))
 
 for cluster in sorted(df["Cluster"].unique()):
-
     cluster_data = df[df["Cluster"] == cluster]
 
     ax.scatter(
@@ -134,11 +120,14 @@ for cluster in sorted(df["Cluster"].unique()):
         alpha=0.7
     )
 
+centroids_original = scaler.inverse_transform(kmeans.cluster_centers_)
+
 ax.scatter(
-    kmeans.cluster_centers_[:, 0],
-    kmeans.cluster_centers_[:, 1],
+    centroids_original[:, 0],
+    centroids_original[:, 1],
     marker="X",
     s=200,
+    c="black",
     label="Cluster Centroids"
 )
 
@@ -168,7 +157,7 @@ st.dataframe(summary, use_container_width=True)
 st.subheader("💡 Business Recommendations")
 
 recommendations = {
-    "High-Income High-Spending Customers":
+    "High-Value Customers":
         "Use premium offers, loyalty programs, personalized promotions, and upselling strategies.",
 
     "High-Income Low-Spending Customers":
@@ -177,22 +166,15 @@ recommendations = {
     "Low-Income High-Spending Customers":
         "Offer affordable premium products, promotions, and loyalty rewards to maintain engagement.",
 
-    "Low-Income Low-Spending Customers":
+    "Low-Value Customers":
         "Use introductory offers and engagement campaigns to encourage higher spending."
 }
 
 for segment, recommendation in recommendations.items():
-
-    st.markdown(
-        f"**{segment}:** {recommendation}"
-    )
+    st.markdown(f"**{segment}:** {recommendation}")
 
 with st.expander("🔍 View Customer Dataset"):
-
-    st.dataframe(
-        df,
-        use_container_width=True
-    )
+    st.dataframe(df, use_container_width=True)
 
 st.divider()
 
